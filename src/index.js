@@ -39,6 +39,8 @@ async function onSearch(e) {
 
   page = 1;
 
+
+
   const response = await fetchImages(searchQuery, page, per_page);
   const totalImages = response.data.totalHits;
   images = response.data.hits;
@@ -55,6 +57,7 @@ async function onSearch(e) {
   }
   cleanMarkup();
   render();
+
 }
 
 async function onLoadMore(e) {
@@ -70,6 +73,7 @@ async function onLoadMore(e) {
   }
   render();
   smoothScroll('.gallery');
+
 }
 
 function render() {
